@@ -1,6 +1,7 @@
 <template lang="pug">
-  nav.nav
-    .nav-left Chalk
+  nav.nav.has-shadow: .container
+    .nav-left
+      a.nav-item Résumé
 </template>
 
 <script>

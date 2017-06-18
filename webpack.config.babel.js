@@ -5,8 +5,8 @@ const loaders = {
   html: 'pug-loader',
 
   css: ExtractTextPlugin.extract({
-    use: 'css-loader',
-    fallback: 'vue-style-loader'
+    fallback: 'vue-style-loader',
+    use: 'css-loader'
   }),
 
   scss: ExtractTextPlugin.extract({
@@ -22,6 +22,12 @@ const loaders = {
 
 const rules = [
   {
+    test: /\.(png|jpe?g|gif|svg|ttf|woff2?|eot)$/,
+    loader: 'file-loader',
+    options: { name: '[name].[ext]?[hash]' }
+  },
+
+  {
     test: /\.js$/,
     loader: 'babel-loader',
     exclude: /node_modules/
@@ -31,6 +37,14 @@ const rules = [
     test: /\.vue$/,
     loader: 'vue-loader',
     options: { loaders }
+  },
+
+  {
+    test: /\.css$/,
+    use: ExtractTextPlugin.extract({
+      fallback: 'style-loader',
+      use: 'css-loader'
+    })
   },
 
   {
