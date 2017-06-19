@@ -8,7 +8,7 @@
       .like(v-for='like in likes', :key='like.name')
         p {{ like.name }}
           span.tag(v-for='tag in like.tags') {{ tag }}
-        progress.progress.is-small(max='16', :value='like.priority')
+        progress.progress.is-small(max='32', :value='like.priority || 0')
 </template>
 
 <script>
@@ -17,31 +17,43 @@
       likes: [
         {
           name: 'JavaScript',
-          priority: 15,
+          priority: 30,
           tags: ['Node.js', 'Vue.js', 'Vuex', 'webpack', 'Socket.IO', 'Koa']
         },
 
         {
           name: 'Linux',
-          priority: 11,
-          tags: ['Ubuntu', 'Vim']
+          priority: 21,
+          tags: ['Ubuntu', 'GNOME', 'zsh', 'Vim']
         },
 
         {
           name: 'HTML',
-          priority: 13,
+          priority: 27,
           tags: ['HTML5', 'Canvas', 'Pug (Jade)', 'Handlebars', 'EJS']
         },
 
         {
           name: 'CSS',
-          priority: 13,
+          priority: 24,
           tags: ['Responsive', 'Sass', 'Less']
         },
 
         {
+          name: 'NoSQL',
+          priority: 25,
+          tags: ['MongoDB', 'Redis']
+        },
+
+        {
+          name: 'Functional programming',
+          priority: 19,
+          tags: ['Lisp (Clojure)', 'Haskell', 'Underscore.js']
+        },
+
+        {
           name: 'Java',
-          priority: 9,
+          priority: 14,
           tags: ['Stream', 'NIO', 'Gradle', 'Minecraft']
         },
 
@@ -66,7 +78,7 @@
       sortBy (field) {
         switch (field) {
           case 'priority':
-            this.sort((a, b) => a.priority - b.priority, true)
+            this.sort((a, b) => (a.priority || 0) - (b.priority || 0), true)
             break
 
           case 'name':
