@@ -16,17 +16,18 @@
             resume-awards
 
           .column
-            resume-likes.tile.is-child
+            resume-likes
+            resume-projects
 </template>
 
 <script>
-  import 'noto-sans-kr'
-  import 'lato-webfont'
+  import WebFont from 'webfontloader'
 
   import ResumeNav from './components/Navigation.vue'
   import ResumeLikes from './components/grid/Likes.vue'
   import ResumeAwards from './components/grid/Awards.vue'
   import ResumeProfile from './components/grid/Profile.vue'
+  import ResumeProjects from './components/grid/Projects.vue'
   import ResumeActivities from './components/grid/Activities.vue'
 
   export default {
@@ -35,17 +36,27 @@
       ResumeLikes,
       ResumeAwards,
       ResumeProfile,
+      ResumeProjects,
       ResumeActivities
+    },
+
+    created () {
+      WebFont.load({
+        custom: {
+          families: ['Spoqa Han Sans'],
+          urls: ['//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+        }
+      })
     }
   }
 </script>
 
 <style lang="scss">
   $primary: #1abd9d;
-  $family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  $family-sans-serif: Lato, Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, "Noto Sans Korean", sans-serif;
+  $family-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  $family-sans-serif: 'Spoqa Han Sans', Lato, Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  @import "~bulma";
+  @import '~bulma';
   @import '~font-awesome/css/font-awesome.css';
 
   *:focus {
