@@ -5,7 +5,7 @@
   "description": "My résumé",
   "main": "index.html",
   "scripts": {
-    "test": "standard",
+    "test": "standard --plugin html '**/*.{js,vue}'",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
@@ -29,6 +29,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
+    "eslint-plugin-html": "^3.0.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "node-sass": "^4.5.3",
