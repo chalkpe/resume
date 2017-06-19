@@ -1,8 +1,13 @@
 <template lang="pug">
   #app
-    resume-header
-    section.section
-      resume-profile
+    resume-nav
+    section.section: .container
+      h1.title Junyoung Park
+      h2.subtitle Full-stack web developer
+
+      .columns
+        resume-contact
+        resume-likes
 </template>
 
 <script>
@@ -10,11 +15,13 @@
   import 'noto-sans-kr'
   import 'font-awesome/css/font-awesome.css'
 
-  import ResumeHeader from './components/ResumeHeader.vue'
-  import ResumeProfile from './components/ResumeProfile.vue'
+  import ResumeNav from './components/Navigation.vue'
+
+  import ResumeLikes from './components/grid/Likes.vue'
+  import ResumeContact from './components/grid/Contact.vue'
 
   export default {
-    components: { ResumeHeader, ResumeProfile }
+    components: { ResumeNav, ResumeLikes, ResumeContact }
   }
 </script>
 
