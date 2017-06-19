@@ -33,10 +33,4 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  @import '~bulma';
-
-  p.description {
-    color: $grey-light;
-  }
-</style>
+<style lang="scss" scoped></style>
