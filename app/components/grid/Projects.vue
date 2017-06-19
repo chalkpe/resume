@@ -2,20 +2,76 @@
   .content
     h2 Projects
 
-    .projects
-      .project(v-for='project in projects')
-        .project-icon.icon: i.fa.fa-circle-o
-        .project-content
-          a(:href='project.href') {{ project.name }}
-          p.period {{ project.period }}
-          p.description {{ project.description }}
-          p.tags: span.tag(v-for='s in project.tags') {{ s }}
+    .projects: .project(v-for='project in projects')
+      .project-icon.icon
+        i.fa.fa-check-circle(v-if='project.year')
+        i.fa.fa-circle-o(v-else)
+
+      .project-content.year(v-if='project.year')
+        p.title.is-3 {{ project.year }}년
+      .project-content(v-else)
+        a(:href='project.href') {{ project.name }}
+        p.period {{ project.period }}
+        p.description {{ project.description }}
+        p.tags: span.tag(v-for='s in project.tags') {{ s }}
 </template>
 
 <script>
   export default {
     data: () => ({
       projects: [
+        { year: 2017 },
+
+        {
+          name: 'Edison',
+          href: 'https://github.com/jnjcomu/edison-server',
+          period: '2017.05 - 현재',
+          description: 'Koa 기반의 RESTful API 서버. JSON Web Token을 사용해 봄.',
+          tags: ['Node.js', 'Koa', 'MongoDB', 'REST API', 'JSON Web Token', 'Beacon']
+        },
+
+        {
+          name: 'facebook-autopoker',
+          href: 'https://github.com/ChalkPE/facebook-autopoker',
+          period: '2017.04',
+          description: 'PhantomJS를 사용해 페이스북 콕 찔러보기를 자동화하는 프로그램.',
+          tags: ['JavaScript', 'PhantomJS', 'Headless browser', 'Babel', 'Crawler', 'Facebook']
+        },
+
+        {
+          name: 'cross-set-solver',
+          href: 'https://chalkpe.github.io/cross-set-solver/',
+          period: '2017.04',
+          description: 'Steam 게임 Cross Set의 웹 버전. Sass와 CSS3 트랜지션을 사용해 봄.',
+          tags: ['Vue.js', 'webpack', 'Babel', 'Pug', 'Sass', 'Bulma', 'standard']
+        },
+
+        {
+          name: 'Hasuin',
+          href: 'https://hasuin.github.io',
+          period: '2017.02',
+          description: '하스스톤 퀴즈 페이지. 처음으로 Vue.js와 webpack을 사용해 봄. 동접 50+명, 페이지 뷰 2500+회.',
+          tags: ['Vue.js', 'webpack', 'Babel', 'Pug', 'LocalStorage', 'lowdb', 'Hearthstone', 'Quiz']
+        },
+
+        { year: 2016 },
+
+        {
+          name: 'gksdud',
+          href: 'https://www.npmjs.com/package/gksdud',
+          period: '2016.12',
+          description: '한/영 키를 안 누르고 친 글자를 고쳐 주는 모듈. 처음으로 유닛 테스트를 작성해 봄.',
+          tags: ['Node.js', 'Functional progamming', 'RegExp', 'mocha', 'TDD']
+        },
+
+        {
+          name: 'DIMI VOCA',
+          href: 'https://github.com/ChalkPE/legacy-voca',
+          period: '2016.07 - 2016.10',
+          description: '교내 온라인 영어 단어 학습 서비스. Bower와 ESLint를 처음 사용해 봄.',
+          tags: ['Node.js', 'Bower', 'Express', 'Async', 'MongoDB', 'Pug', 'jQuery', 'Semantic UI']
+        },
+
         {
           name: 'node-minesweeper',
           href: 'https://github.com/ChalkPE/node-minesweeper',
@@ -23,6 +79,8 @@
           description: '터미널에서 돌아가는 지뢰찾기 게임. npm에 처음으로 올린 모듈.',
           tags: ['Node.js', 'JavaScript', 'Minesweeper', 'npm', 'CLI']
         },
+
+        { year: 2015 },
 
         {
           name: 'Cesium',
@@ -51,9 +109,17 @@
         {
           name: 'PocketHeaderBuilder',
           href: 'https://github.com/ChalkPE/PocketHeaderBuilder',
-          period: '2015.10',
+          period: '2015.11',
           description: '디어셈블된 MC:PE 바이너리 코드에서 C++ 헤더를 생성해 주는 프로그램.',
           tags: ['Java', 'Reversing', 'C++', 'Mangling', 'Crawler']
+        },
+
+        {
+          name: 'ALyricBot',
+          href: 'https://github.com/ChalkPE/ALyricBot',
+          period: '2015.10',
+          description: '텔레그램 그룹에 전송된 음악 파일의 가사를 알송 서버에서 찾아주는 봇. 파일 캐싱을 처음 해 봄.',
+          tags: ['Java', 'Telegram Bot', 'ALSong', 'NIO']
         },
 
         {
@@ -71,6 +137,8 @@
           description: 'MC:PE 바이너리 패치 파일을 만들어 주는 안드로이드 앱. 친구와 공동 개발.',
           tags: ['Android', 'Java', 'Gradle', 'PTPatch', 'Minecraft PE', 'Reversing']
         },
+
+        { year: 2014 },
 
         {
           name: 'Takoyaki',
