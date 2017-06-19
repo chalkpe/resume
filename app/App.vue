@@ -1,13 +1,22 @@
 <template lang="pug">
   #app
     resume-nav
-    section.section: .container
-      h1.title Junyoung Park
-      h2.subtitle Full-stack web developer
 
-      .columns
-        resume-contact
-        resume-likes
+    main
+      section.hero.is-primary.is-bold
+        .hero-body: .container
+          h1.title Junyoung Park
+          h2.subtitle Full-stack web developer
+
+      section.section
+        .container: .columns
+          .column.is-3
+            resume-profile
+            resume-activities
+            resume-awards
+
+          .column
+            resume-likes.tile.is-child
 </template>
 
 <script>
@@ -16,10 +25,18 @@
 
   import ResumeNav from './components/Navigation.vue'
   import ResumeLikes from './components/grid/Likes.vue'
-  import ResumeContact from './components/grid/Contact.vue'
+  import ResumeAwards from './components/grid/Awards.vue'
+  import ResumeProfile from './components/grid/Profile.vue'
+  import ResumeActivities from './components/grid/Activities.vue'
 
   export default {
-    components: { ResumeNav, ResumeLikes, ResumeContact }
+    components: {
+      ResumeNav,
+      ResumeLikes,
+      ResumeAwards,
+      ResumeProfile,
+      ResumeActivities
+    }
   }
 </script>
 
@@ -41,7 +58,7 @@
     flex-direction: column;
   }
 
-  section {
+  main {
     flex: 1 0 auto;
   }
 </style>

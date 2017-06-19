@@ -1,14 +1,16 @@
 <template lang="pug">
-  .column.content
+  .content
     h2 Likes
       a.sort(@click='sortBy("name")') name
       a.sort(@click='sortBy("priority")') priority
 
     transition-group(name='like')
-      .like(v-for='like in likes', :key='like.name')
-        p {{ like.name }}
+      .level.like(v-for='like in likes', :key='like.name')
+        .level-left
+          span.name {{ like.name }}
           span.tag(v-for='tag in like.tags') {{ tag }}
-        progress.progress.is-small(max='32', :value='like.priority || 0')
+        .level-right
+          progress.progress.is-small(max='32', :value='like.priority || 0')
 </template>
 
 <script>
@@ -24,19 +26,19 @@
         {
           name: 'Linux',
           priority: 21,
-          tags: ['Ubuntu', 'GNOME', 'zsh', 'Vim']
+          tags: ['Ubuntu', 'GNOME', 'Vim', 'zsh']
         },
 
         {
           name: 'HTML',
           priority: 27,
-          tags: ['HTML5', 'Canvas', 'Pug (Jade)', 'Handlebars', 'EJS']
+          tags: ['HTML5', 'Canvas', 'Pug (Jade)', 'Handlebars']
         },
 
         {
           name: 'CSS',
           priority: 24,
-          tags: ['Responsive', 'Sass', 'Less']
+          tags: ['Responsive CSS', 'Sass', 'Less']
         },
 
         {
@@ -59,7 +61,7 @@
 
         {
           name: 'PHP',
-          priority: 2,
+          priority: 3,
           tags: ['Composer', 'CodeIgniter', 'Slim']
         }
       ]
@@ -105,20 +107,13 @@
   }
 
   .like {
-    &:not(:last-of-type) {
-      margin-bottom: 1.5em;
-    }
-
-    p {
-      margin-bottom: 0.7em;
+    .name {
+      font-size: 1.25em;
+      margin-right: 0.5em;
     }
 
     .tag {
-      margin-left: 0.5em;
-
-      &:first-of-type {
-        margin-left: 1em;
-      }
+      margin: 0.2em;
     }
   }
 </style>
