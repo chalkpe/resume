@@ -2,7 +2,7 @@
   "name": "resume",
   "version": "1.0.0",
   "private": true,
-  "description": "My résumé",
+  "description": "Junyoung Park's Résumé page",
   "main": "index.html",
   "scripts": {
     "test": "npm run lint && npm run build",
