@@ -15,7 +15,7 @@
             resume-activities
             resume-awards
 
-          .column.is-offset-1
+          .column.is-8.is-offset-1
             resume-likes
             resume-projects
 </template>

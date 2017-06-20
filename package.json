@@ -5,7 +5,8 @@
   "description": "My résumé",
   "main": "index.html",
   "scripts": {
-    "test": "standard --plugin html '**/*.{js,vue}'",
+    "test": "npm run lint && npm run build",
+    "lint": "standard --plugin html '**/*.{js,vue}'",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },

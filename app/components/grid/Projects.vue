@@ -8,7 +8,7 @@
         i.fa.fa-circle-o(v-else)
 
       .project-content.year(v-if='project.year')
-        p.title.is-3 {{ project.year }}년
+        p.title.is-4 {{ project.year }}년
       .project-content(v-else)
         a(:href='project.href') {{ project.name }}
         p.period {{ project.period }}
@@ -172,7 +172,7 @@
 
       &::before {
         content: '';
-        background-color: $grey-light;
+        background-color: $grey-lighter;
 
         width: 0.2em;
 
