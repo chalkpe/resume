@@ -1,22 +1,22 @@
-import path from 'path'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const loaders = {
   html: 'pug-loader',
 
   css: ExtractTextPlugin.extract({
     fallback: 'vue-style-loader',
-    use: 'css-loader'
+    use: ['css-loader', 'postcss-loader']
   }),
 
   scss: ExtractTextPlugin.extract({
     fallback: 'vue-style-loader',
-    use: ['css-loader', 'sass-loader']
+    use: ['css-loader', 'sass-loader', 'postcss-loader']
   }),
 
   sass: ExtractTextPlugin.extract({
     fallback: 'vue-style-loader',
-    use: ['css-loader', 'sass-loader?indentedSyntax']
+    use: ['css-loader', 'sass-loader?indentedSyntax', 'postcss-loader']
   })
 }
 
@@ -43,7 +43,7 @@ const rules = [
     test: /\.css$/,
     use: ExtractTextPlugin.extract({
       fallback: 'style-loader',
-      use: 'css-loader'
+      use: ['css-loader', 'postcss-loader']
     })
   },
 
@@ -51,7 +51,7 @@ const rules = [
     test: /\.s[ac]ss$/,
     use: ExtractTextPlugin.extract({
       fallback: 'style-loader',
-      use: ['css-loader', 'sass-loader']
+      use: ['css-loader', 'sass-loader', 'postcss-loader']
     })
   }
 ]
@@ -79,5 +79,7 @@ export default {
     hot: true,
     host: '0.0.0.0',
     historyApiFallback: true
-  }
+  },
+
+  devtool: '#eval-source-map'
 }
