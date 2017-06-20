@@ -2,11 +2,20 @@
   nav.nav.has-shadow: .container
     .nav-left
       a.nav-item(href='https://github.com/ChalkPE/resume') Résumé
-      a.nav-item(href='https://drive.google.com/open?id=0B9sjYRtVv3Q5TFR3UFdQOU1rN3M') 증명사진 보기
+      a.nav-item(@click='modalOpen = true') ID Picture
+
+    .modal(:class='modalOpen && `is-active`')
+      .modal-background(@click='modalOpen = false')
+      .modal-content: p.image: img(src='http://i.imgur.com/JaIkDmv.jpg')
+      button.modal-close(@click='modalOpen = false')
 </template>
 
 <script>
-  export default {}
+  export default {
+    data: () => ({
+      modalOpen: false
+    })
+  }
 </script>
 
 <style lang="css"></style>
