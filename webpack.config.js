@@ -56,7 +56,7 @@ const rules = [
   }
 ]
 
-export default {
+module.exports = {
   entry: './app/app.js',
 
   output: {
