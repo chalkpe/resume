@@ -1,7 +1,7 @@
 <template lang="pug">
   .content
     h2 Profile
-    p 새로운 것들에 늘 가슴이 두근거리는 작은 웹 개발자입니다. 달콤한 간식을 먹으며 느긋하게 코딩하는 그 순간이 세상에서 제일 행복해요!
+    p 새로운 것들에 늘 가슴이 두근거리는 작은 개발자입니다. 달콤한 간식을 먹으며 느긋하게 코딩하는 그 순간이 제일 행복해요!
 
     .level.is-mobile(v-for='contact in contacts'): .level-left
       span.level-item.icon: i.fa(:class='`fa-${contact.icon}`')

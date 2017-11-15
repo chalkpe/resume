@@ -20,7 +20,7 @@
         {
           name: 'JavaScript',
           priority: 30,
-          tags: ['Node.js', 'Vue.js', 'Vuex', 'webpack', 'Socket.IO', 'Koa']
+          tags: ['Node.js', 'Vue.js', 'webpack', 'Socket.IO', 'Koa', 'Angular', 'TypeScript']
         },
 
         {
@@ -32,13 +32,13 @@
         {
           name: 'HTML',
           priority: 27,
-          tags: ['HTML5', 'Canvas', 'Pug (Jade)', 'Handlebars']
+          tags: ['HTML5', 'Canvas', 'Pug', 'Crawler']
         },
 
         {
           name: 'CSS',
           priority: 24,
-          tags: ['Responsive CSS', 'Sass', 'Less']
+          tags: ['Responsive CSS', 'Sass', 'Less', 'PostCSS']
         },
 
         {
@@ -56,13 +56,13 @@
         {
           name: 'Java',
           priority: 14,
-          tags: ['Stream', 'NIO', 'Gradle', 'Minecraft']
+          tags: ['Stream', 'NIO', 'Maven', 'Gradle', 'Minecraft']
         },
 
         {
           name: 'PHP',
           priority: 3,
-          tags: ['Composer', 'CodeIgniter', 'Slim']
+          tags: ['PHP7', 'Composer', 'CodeIgniter']
         }
       ]
     }),

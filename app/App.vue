@@ -6,7 +6,7 @@
       section.hero.is-primary.is-bold
         .hero-body: .container
           h1.title Junyoung Park
-          h2.subtitle Full-stack web developer
+          h2.subtitle Newbie web developer
 
       section.section
         .container: .columns

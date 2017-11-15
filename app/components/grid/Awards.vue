@@ -17,7 +17,7 @@
           name: '제1회 디미고 해카톤 대회',
           href: 'https://github.com/hex-random',
           prize: '은상',
-          date: '2016년 12월'
+          date: '2016.12'
         }
       ]
     })
