@@ -8,11 +8,11 @@
 
       section.section
         .container: .columns
-          .column.is-2
-            resume-profile
-
-          .column.is-9.is-offset-1
+          .column.is-3
             resume-skills
+            resume-contacts
+
+          .column.is-8.is-offset-1
             resume-projects
 </template>
 
@@ -22,13 +22,13 @@ import 'font-awesome/css/font-awesome.css'
 import WebFont from 'webfontloader'
 
 import ResumeSkills from './components/grid/Skills.vue'
-import ResumeProfile from './components/grid/Profile.vue'
+import ResumeContacts from './components/grid/Contacts.vue'
 import ResumeProjects from './components/grid/Projects.vue'
 
 export default {
   components: {
     ResumeSkills,
-    ResumeProfile,
+    ResumeContacts,
     ResumeProjects
   },
 

@@ -15,6 +15,6 @@
 
 <style lang="scss" scoped>
   .tag {
-    margin: 0.25em;
+    margin: 0.5em;
   }
 </style>
