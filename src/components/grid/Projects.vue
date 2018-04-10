@@ -61,7 +61,7 @@ export default { data: () => ({ projects }) }
 
     &__period {
       color: $grey-light;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5em !important;
     }
 
     &__tags {

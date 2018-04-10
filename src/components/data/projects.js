@@ -1,4 +1,22 @@
 export default [
+  { year: 2018 },
+
+  {
+    name: 'react-waldo',
+    href: 'https://github.com/ChalkPE/react-waldo',
+    period: '2018.04',
+    description: '입력한 문장을 왈도체로 만들어 주는 서비스',
+    tags: ['React', 'MobX', 'webpack']
+  },
+
+  {
+    name: 'inventory',
+    href: 'https://github.com/ChalkPE/inventory-admin',
+    period: '2018.01',
+    description: '쇼핑몰 어드민 관리 페이지',
+    tags: ['Vue.js', 'Vuex', 'MongoDB']
+  },
+
   { year: 2017 },
 
   {
