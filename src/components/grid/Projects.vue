@@ -1,15 +1,9 @@
 <template lang="pug">
-  .content
-    h2 Projects
-
-    .projects: .project(v-for='project in projects')
-      .project__icons.icon
-        i.project__icon.fa.fa-check-circle(v-if='project.year')
-        i.project__icon.fa.fa-circle-o(v-else)
-
-      .project__content.year(v-if='project.year')
-        p.title.is-4 {{ project.year }}년
-      .project__content(v-else)
+  .content: .projects(v-for='history of timeline')
+    p.title.is-4 {{ history.year }}년
+    .project(v-for='project in history.projects')
+      .project__icons.icon: i.project__icon.fa.fa-circle-o
+      .project__content
         a.project__name(:href='project.href') {{ project.name }}
         p.project__period {{ project.period }}
         p.project__description {{ project.description }}
@@ -18,13 +12,11 @@
 </template>
 
 <script>
-import projects from '../data/projects'
-export default { data: () => ({ projects }) }
+import timeline from '../data/timeline'
+export default { data: () => ({ timeline }) }
 </script>
 
 <style lang="scss">
-  @import '~bulma';
-
   .project {
     display: flex;
     position: relative;
@@ -32,22 +24,23 @@ export default { data: () => ({ projects }) }
 
     &:not(:last-child)::before {
       content: '';
-      background-color: $grey-lighter;
+      background-color: #dbdbdb;
 
       width: 0.2em;
       height: 100%;
 
-      top: 1.5em;
+      top: 1.7em;
       left: 0.63em;
       position: absolute;
     }
 
     &__icons {
+      padding-top: 0.4em;
       flex: 0 0 auto;
     }
 
     &__icon {
-      color: $primary;
+      color: #1abd9d;
     }
 
     &__content {
@@ -60,7 +53,7 @@ export default { data: () => ({ projects }) }
     }
 
     &__period {
-      color: $grey-light;
+      color: #b5b5b5;
       margin-bottom: 0.5em !important;
     }
 
