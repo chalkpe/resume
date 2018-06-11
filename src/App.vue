@@ -13,7 +13,7 @@
             resume-contacts
 
           .column.is-8.is-offset-1
-            resume-projects
+            resume-timeline
 </template>
 
 <script>
@@ -21,15 +21,15 @@ import 'bulma/css/bulma.css'
 import 'font-awesome/css/font-awesome.css'
 import WebFont from 'webfontloader'
 
-import ResumeSkills from './components/grid/Skills.vue'
-import ResumeContacts from './components/grid/Contacts.vue'
-import ResumeProjects from './components/grid/Projects.vue'
+import ResumeSkills from './components/Skills.vue'
+import ResumeContacts from './components/Contacts.vue'
+import ResumeTimeline from './components/Timeline.vue'
 
 export default {
   components: {
     ResumeSkills,
     ResumeContacts,
-    ResumeProjects
+    ResumeTimeline
   },
 
   created () {
