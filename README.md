@@ -1,10 +1,10 @@
 # resume
-Junyoung Park's Résumé page
+Junyoung Park's résumé page
 
 ## Installation
 ```bash
 $ git clone https://github.com/ChalkPE/resume.git
-$ cd resume && npm install && npm run build
+$ cd resume && yarn install && yarn start
 ```
 
 ## License
