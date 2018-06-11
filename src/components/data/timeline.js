@@ -28,7 +28,7 @@ export default [
       name: 'hots-replay-bot',
       href: 'https://github.com/if-Team/hots-replay-bot',
       period: '2017.10',
-      description: '히오스 전적을 검색해 주는 텔레그램 봇',
+      description: '히어로즈 오브 더 스톰 전적을 검색해 주는 텔레그램 봇',
       tags: ['JavaScript', 'Telegram', 'Heroes of the Storm']
     }, {
       name: 'atom-rip',
