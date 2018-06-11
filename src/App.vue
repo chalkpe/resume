@@ -1,19 +1,15 @@
 <template lang="pug">
-  #app
-    main
-      section.hero.is-primary.is-bold
-        .hero-body: .container
-          h1.title Junyoung Park
-          h2.subtitle Front-end web developer
+  #app: main
+    section.hero.is-primary.is-bold: .hero-body: .container
+      h1.title Junyoung Park
+      h2.subtitle Front-end web developer
 
-      section.section
-        .container: .columns
-          .column.is-3
-            resume-skills
-            resume-contacts
-
-          .column.is-8.is-offset-1
-            resume-timeline
+    section.section: .container: .columns
+      .column.is-3
+        resume-skills
+        resume-contacts
+      .column.is-8.is-offset-1
+        resume-timeline
 </template>
 
 <script>

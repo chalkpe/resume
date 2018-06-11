@@ -5,6 +5,7 @@
   "description": "Junyoung Park's Résumé page",
   "main": "index.html",
   "scripts": {
+    "test": "yarn run lint && yarn run build",
     "lint": "standard --plugin html '**/*.{js,vue}'",
     "build": "parcel build index.html --no-minify",
     "start": "parcel index.html --open"
@@ -27,6 +28,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
+    "eslint-plugin-html": "^4.0.3",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.8.1",
     "pug": "^2.0.3",
