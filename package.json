@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "lint": "standard --plugin html '**/*.{js,vue}'",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --no-minify",
     "start": "parcel index.html --open"
   },
   "repository": {
