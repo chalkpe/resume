@@ -5,13 +5,12 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      skills: ['Node.js', 'Vue.js', 'Koa', 'webpack', 'SPA', 'Sass', 'MongoDB', 'Firebase']
-    })
-  }
+export default {
+  data: () => ({
+    skills: ['Node.js', 'Vue.js', 'React', 'Koa', 'hapi', 'webpack', 'MongoDB', 'Firebase']
+  })
+}
 </script>
-
 
 <style lang="scss" scoped>
   .tag {

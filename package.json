@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "Junyoung Park's Résumé page",
-  "main": "index.html",
   "scripts": {
-    "test": "yarn run lint && yarn run build",
-    "lint": "standard --plugin html '**/*.{js,vue}'",
-    "build": "parcel build index.html --no-minify",
-    "start": "parcel index.html --open"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
@@ -17,30 +15,69 @@
   "keywords": [
     "resume"
   ],
-  "author": "ChalkPE <chalk@chalk.pe>",
+  "author": "ChalkPE <chalkpe@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ChalkPE/resume/issues"
   },
   "homepage": "https://github.com/ChalkPE/resume#readme",
-  "devDependencies": {
-    "@vue/component-compiler-utils": "1.3.1",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "eslint-plugin-html": "^4.0.3",
-    "node-sass": "^4.9.0",
-    "parcel-bundler": "^1.8.1",
-    "pug": "^2.0.3",
-    "standard": "^11.0.1",
-    "vue-template-compiler": "^2.5.16"
-  },
   "dependencies": {
-    "bulma": "^0.7.1",
+    "bulma": "^0.9.1",
+    "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
-    "vue": "^2.5.17",
-    "vue-hot-reload-api": "^2.3.0",
-    "vue-router": "^3.0.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
     "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "lint-staged": "^9.5.0",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "vue": {
+    "publicPath": "./"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }

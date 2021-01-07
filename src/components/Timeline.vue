@@ -4,7 +4,7 @@
     .project(v-for='project in history.projects')
       .project__icons.icon: i.project__icon.fa.fa-circle-o
       .project__content
-        a.project__name(:href='project.href') {{ project.name }}
+        a.project__name(:href='project.href' target='_blank') {{ project.name }}
         p.project__period {{ project.period }}
         p.project__description {{ project.description }}
         p.project__tags
