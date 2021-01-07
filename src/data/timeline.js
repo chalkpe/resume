@@ -42,6 +42,12 @@ export default [
   {
     year: 2018,
     projects: [{
+      name: 'DIMIGOIN',
+      href: 'https://github.com/dimigoin/dimigoin-front',
+      period: '2018.01 - 2018.12',
+      description: '한국디지털미디어고등학교 시스템 전산화 프로젝트',
+      tags: ['Vue', 'Vuex', 'webpack', 'Sass']
+    }, {
       name: 'crystal-analysis',
       href: 'https://github.com/ChalkPE/crystal-analysis',
       period: '2018.12',
