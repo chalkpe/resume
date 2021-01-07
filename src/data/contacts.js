@@ -14,7 +14,7 @@ export default [
   {
     text: '한국디지털미디어고등학교',
     icon: 'graduation-cap',
-    href: 'https://dimigo.hs.kr'
+    href: 'https://www.dimigo.hs.kr/'
   },
 
   {
