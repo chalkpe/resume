@@ -1,5 +1,15 @@
 export default [
   {
+    year: 2021,
+    projects: [{
+      name: 'fleetify',
+      href: 'https://github.com/ChalkPE/fleetify',
+      period: '2021.05',
+      description: '트위터 프로필 사진에 테두리를 넣어 주는 페이지',
+      tags: ['React', 'Next.js']
+    }]
+  },
+  {
     year: 2020,
     projects: [{
       name: 'ultimate-predation',
