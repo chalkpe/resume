@@ -3,11 +3,9 @@
     section.hero.is-primary.is-bold: .hero-body: .container
       h1.title Junyoung Park
 
-    section.section: .container: .columns
-      .column.is-3
-        resume-contacts
-      .column.is-8.is-offset-1
-        resume-timeline
+    section.section: .container
+      resume-contacts
+      resume-timeline
 </template>
 
 <script>
@@ -52,5 +50,9 @@ export default {
 
   main {
     flex: 1 0 auto;
+  }
+
+  .content:not(:last-child) {
+    margin-bottom: 3rem;
   }
 </style>

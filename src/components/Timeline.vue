@@ -1,69 +1,41 @@
 <template lang="pug">
-  .content: .projects(v-for='history of timeline')
-    p.title.is-4 {{ history.year }}년
-    .project(v-for='project in history.projects')
-      .project__icons.icon: i.project__icon.fa.fa-circle-o
-      .project__content
-        a.project__name(:href='project.href' target='_blank') {{ project.name }}
-        p.project__period {{ project.period }}
-        p.project__description {{ project.description }}
-        p.project__tags
-          span.project__tag.tag(v-for='s in project.tags') {{ s }}
+  .timeline
+    .content(v-for='work in works' :key='work.name')
+      h4.title.is-4 {{ work.name }}
+      .projects(v-for='history of work.data' :key='history.name' v-if='history.projects.length')
+        h5.title.is-5 {{ history.year }}년
+        resume-project(v-for='project in history.projects' :project='project' :key='project.name')
 </template>
 
 <script>
 import timeline from '../data/timeline'
-export default { data: () => ({ timeline }) }
-</script>
+import ResumeProject from './Project.vue'
 
-<style lang="scss">
-  .project {
-    display: flex;
-    position: relative;
-    margin-bottom: 1.6rem;
+const types = [
+  {
+    name: '경력사항',
+    filter: (p) => p.type === 'work'
+  },
+  {
+    name: '프로젝트',
+    filter: (p) => p.type === undefined
+  }
+]
 
-    &:not(:last-child)::before {
-      content: '';
-      background-color: #dbdbdb;
+export default {
+  components: { ResumeProject },
 
-      width: 0.2em;
-      height: 100%;
-
-      top: 1.7em;
-      left: 0.63em;
-      position: absolute;
-    }
-
-    &__icons {
-      padding-top: 0.4em;
-      flex: 0 0 auto;
-    }
-
-    &__icon {
-      color: #1abd9d;
-    }
-
-    &__content {
-      flex: 1 1 auto;
-      padding: 0 0 0.2rem 1.5rem;
-    }
-
-    &__name {
-      font-size: 1.2em;
-    }
-
-    &__period {
-      color: #b5b5b5;
-      margin-bottom: 0.5em !important;
-    }
-
-    &__tags {
-      margin-top: -0.5em;
-    }
-
-    &__tag:not(:last-of-type) {
-      margin-right: 0.5em;
-      margin-bottom: 0.5em;
+  data: () => ({ timeline }),
+  computed: {
+    works: function () {
+      return types.map(({ name, filter }) => ({
+        name,
+        data: this.timeline.map((h) => ({
+          ...h,
+          projects: h.projects.filter(filter)
+        }))
+      }))
     }
   }
-</style>
+}
+</script>

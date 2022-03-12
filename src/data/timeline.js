@@ -5,8 +5,9 @@ export default [
       name: 'EYEVACS',
       href: 'https://eyevacs.com',
       description: '클라우드 기반 주체관제/요금정산 시스템',
-      period: '2020 - 2022',
-      tags: ['React', 'Recoil', 'Recharts', 'hapi', 'MongoDB', 'Redis', 'AWS ECS']
+      period: '2020.11 - 2022',
+      tags: ['React', 'Recoil', 'Recharts', 'hapi', 'MongoDB', 'Redis', 'AWS ECS'],
+      type: 'work'
     }]
   },
 
@@ -24,6 +25,12 @@ export default [
       period: '2021.05',
       description: '트위터 프로필 사진에 테두리를 넣어 주는 페이지',
       tags: ['React', 'Next.js']
+    }, {
+      name: 'weather-poc',
+      href: 'https://chalkpe.github.io/weather-poc/',
+      period: '2021.04',
+      description: 'PC 게임 파이널판타지14 날씨 데이터 시각화 페이지',
+      tags: ['D3.js', 'MongoDB']
     }]
   },
 

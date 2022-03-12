@@ -1,9 +1,9 @@
 <template lang="pug">
   .content
-    h2 Contacts
-    .level.is-mobile(v-for='contact in contacts'): .level-left
-      span.level-item.icon: i.fa(:class='`fa-${contact.icon}`')
-      a.level-item(:href='contact.href') {{ contact.text }}
+    h4.title.is-4 인적사항
+    .level.is-mobile(v-for='c in contacts' :title='c.title'): .level-left
+      span.level-item.icon: i.fa(:class='`fa-${c.icon}`')
+      a.level-item(:href='c.href') {{ c.text }}
 </template>
 
 <script>
