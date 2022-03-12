@@ -1,6 +1,6 @@
 export default [
   {
-    title: '생일',
+    title: '생년월일',
     text: '2000년 6월 17일',
     icon: 'birthday-cake',
     href: '#'
@@ -24,7 +24,13 @@ export default [
     title: '학력',
     text: '한국디지털미디어고등학교',
     icon: 'graduation-cap',
-    href: 'https://www.dimigo.hs.kr/',
-    type: 'education'
+    href: 'https://www.dimigo.hs.kr/'
+  },
+
+  {
+    title: 'GitHub',
+    text: '@ChalkPE',
+    icon: 'github-alt',
+    href: 'https://github.com/ChalkPE'
   }
 ]
