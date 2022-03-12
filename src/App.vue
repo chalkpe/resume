@@ -2,11 +2,9 @@
   #app: main
     section.hero.is-primary.is-bold: .hero-body: .container
       h1.title Junyoung Park
-      h2.subtitle Front-end web developer
 
     section.section: .container: .columns
       .column.is-3
-        resume-skills
         resume-contacts
       .column.is-8.is-offset-1
         resume-timeline
@@ -17,13 +15,11 @@ import 'bulma/css/bulma.css'
 import 'font-awesome/css/font-awesome.css'
 import WebFont from 'webfontloader'
 
-import ResumeSkills from './components/Skills.vue'
 import ResumeContacts from './components/Contacts.vue'
 import ResumeTimeline from './components/Timeline.vue'
 
 export default {
   components: {
-    ResumeSkills,
     ResumeContacts,
     ResumeTimeline
   },
@@ -40,6 +36,10 @@ export default {
 </script>
 
 <style>
+  * {
+    word-break: keep-all;
+  }
+
   *:focus {
     outline: none;
   }

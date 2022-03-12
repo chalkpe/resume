@@ -1,7 +1,24 @@
 export default [
   {
+    year: 2022,
+    projects: [{
+      name: 'EYEVACS',
+      href: 'https://eyevacs.com',
+      description: '클라우드 기반 주체관제/요금정산 시스템',
+      period: '2020 - 2022',
+      tags: ['React', 'Recoil', 'Recharts', 'hapi', 'MongoDB', 'Redis', 'AWS ECS']
+    }]
+  },
+
+  {
     year: 2021,
     projects: [{
+      name: 'obj-to-cloudwatch-pattern',
+      href: 'https://github.com/ChalkPE/obj-to-cloudwatch-pattern',
+      period: '2021.08',
+      description: '객체를 AWS CloudWatch 패턴 구문으로 변환해주는 라이브러리',
+      tags: ['JavaScript', 'AWS']
+    }, {
       name: 'fleetify',
       href: 'https://github.com/ChalkPE/fleetify',
       period: '2021.05',
@@ -9,6 +26,7 @@ export default [
       tags: ['React', 'Next.js']
     }]
   },
+
   {
     year: 2020,
     projects: [{
