@@ -1,7 +1,7 @@
 <template lang="pug">
   #app: main
     section.hero.is-primary.is-bold: .hero-body: .container
-      h1.title Junyoung Park
+      h1.title Seol Park
 
     section.section: .container
       resume-contacts

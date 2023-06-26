@@ -1,5 +1,5 @@
 # resume
-Junyoung Park's résumé page
+Seol Park's résumé page
 
 ## Installation
 ```bash
