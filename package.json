@@ -10,17 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChalkPE/resume.git"
+    "url": "git+https://github.com/chalkpe/resume.git"
   },
   "keywords": [
     "resume"
   ],
-  "author": "ChalkPE <chalkpe@gmail.com>",
+  "author": "chalkpe <chalkpe@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChalkPE/resume/issues"
+    "url": "https://github.com/chalkpe/resume/issues"
   },
-  "homepage": "https://github.com/ChalkPE/resume#readme",
+  "homepage": "https://github.com/chalkpe/resume#readme",
   "dependencies": {
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",

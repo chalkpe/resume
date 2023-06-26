@@ -29,8 +29,8 @@ export default [
 
   {
     title: 'GitHub',
-    text: '@ChalkPE',
+    text: '@chalkpe',
     icon: 'github-alt',
-    href: 'https://github.com/ChalkPE'
+    href: 'https://github.com/chalkpe'
   }
 ]
